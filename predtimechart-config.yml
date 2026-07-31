@@ -1,0 +1,16 @@
+---
+# Only one `rounds` entry can be plotted, and this hub has exactly one round
+# covering all seasons, so 0 is correct.
+rounds_idx: 0
+reference_date_col_name: 'reference_date'
+target_date_col_name: 'target_end_date'
+horizon_col_name: 'horizon'
+# No models have submitted to this hub yet. Naming a model that does not exist
+# leaves the plot blank on load, so start empty and add model ids here once
+# teams begin submitting (e.g. ['dmaprime-gam']).
+initial_checked_models: []
+# Opening view: the 2025-2026 season. Set to null to let predtimechart choose.
+initial_xaxis_range:
+  - '2025-10-04'
+  - '2026-10-03'
+disclaimer: "Forecasts shown here are submitted to the DMA-PRIME Model Challenge, a research and training exercise run by the Clemson University Center for Public Health Modeling and Response. They are not CDC forecasts and are not intended to inform public health decisions."

@@ -1,0 +1,5 @@
+---
+# NOTE: `hub` must match hub-config/admin.json > repository (owner/name) in the
+# hub repo. Verify the owner before the first build.
+hub: "bleicham/DMA-PRIME-Model-Challenge-Sandbox"
+title: "DMA-PRIME Model Challenge"
