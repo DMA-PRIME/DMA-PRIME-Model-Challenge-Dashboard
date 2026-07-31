@@ -1,0 +1,5 @@
+"model_id","horizon","wis","ae_median","interval_coverage_50","interval_coverage_95","n"
+"DMAPRIME-QR",0,29.3285434782609,44.25,0.3,0.75,20
+"DMAPRIME-QR",1,43.2169347826087,58.95,0.1,0.6,20
+"DMAPRIME-QR",2,46.4427608695652,61.65,0.2,0.45,20
+"DMAPRIME-QR",3,46.9851956521739,61.3,0.15,0.45,20
