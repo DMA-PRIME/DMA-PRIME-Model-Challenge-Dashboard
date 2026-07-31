@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "The DMA-PRIME Model Challenge is a collaborative respiratory disease forecasting challenge run by the Clemson University Center for Public Health Modeling and Response (DMA-PRIME), in the Department of Public Health Sciences.\nParticipants submit weekly quantile forecasts for three pathogens across two surveillance streams, following Hubverse data standards."
+  },
+  {
+    "objectID": "index.html#what-is-forecast",
+    "href": "index.html#what-is-forecast",
+    "title": "Introduction",
+    "section": "What is forecast",
+    "text": "What is forecast\n\n\n\n\n\n\n\n\nTarget\nUnits\nSource\n\n\n\n\nWeekly COVID-19, influenza, and RSV hospital admissions\ncount\nNHSN\n\n\nWeekly proportion of ED visits due to COVID-19, influenza, and RSV\nproportion\nNSSP\n\n\n\nForecasts cover the nation, the 50 states, the District of Columbia, and Puerto Rico, at horizons 0 through 3 weeks ahead. Horizon 0 is a nowcast of the week currently in progress, for which no data have been published at the submission deadline.\nPuerto Rico appears for the hospital admission targets only, because NSSP does not publish emergency department data for Puerto Rico.\nTarget data begin with the 2023-2024 respiratory virus season (week ending 2023-10-07), which is also when RSV reporting to NHSN began, so all three pathogens share a start date."
+  },
+  {
+    "objectID": "index.html#how-to-read-the-ed-visit-targets",
+    "href": "index.html#how-to-read-the-ed-visit-targets",
+    "title": "Introduction",
+    "section": "How to read the ED visit targets",
+    "text": "How to read the ED visit targets\nCDC publishes emergency department metrics as a percentage. Following the CDC FluSight and COVID-19 Forecast Hubs, this challenge stores, accepts, and scores them as a decimal proportion between 0 and 1. A value of 0.0231 on this dashboard means 2.31% of emergency department visits."
+  },
+  {
+    "objectID": "index.html#submission-timing-and-reporting-revisions",
+    "href": "index.html#submission-timing-and-reporting-revisions",
+    "title": "Introduction",
+    "section": "Submission timing and reporting revisions",
+    "text": "Submission timing and reporting revisions\nThe submission window opens Sunday and closes Wednesday at 11:59pm US/Eastern, three days before the reference date.\nNHSN admissions are revised after they are first published. The hub records a dated snapshot of the observed data every Wednesday, so it is possible to reconstruct exactly what a forecaster could have seen at any past reference date.\n\n\n\n\n\n\nWarning\n\n\n\nA model trained on today’s settled values and then used to “forecast” a past week will look more accurate than any real-time forecaster could have been, because it can see values that were still being revised at the time. Use the dated snapshots in the hub’s target data rather than the latest values when backtesting.\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis challenge is a research and training exercise. Forecasts collected here are not CDC submissions and are not intended to inform public health decisions. Everything in the hub repository is public."
+  },
+  {
+    "objectID": "eval.html",
+    "href": "eval.html",
+    "title": "DMA-PRIME Model Challenge",
+    "section": "",
+    "text": "this is replaced"
+  },
+  {
+    "objectID": "forecast.html",
+    "href": "forecast.html",
+    "title": "DMA-PRIME Model Challenge",
+    "section": "",
+    "text": "this is replaced"
+  }
+]
