@@ -1,14 +1,14 @@
 {
     "target_variables": [
         {
-            "value": "wk inc covid hosp",
-            "text": "incident COVID-19 hospitalizations",
-            "plot_text": "incident COVID-19 hospitalizations"
-        },
-        {
             "value": "wk inc flu hosp",
             "text": "incident influenza hospitalizations",
             "plot_text": "incident influenza hospitalizations"
+        },
+        {
+            "value": "wk inc covid hosp",
+            "text": "incident COVID-19 hospitalizations",
+            "plot_text": "incident COVID-19 hospitalizations"
         },
         {
             "value": "wk inc rsv hosp",
@@ -16,14 +16,14 @@
             "plot_text": "incident RSV hospitalizations"
         },
         {
-            "value": "wk inc covid prop ed visits",
-            "text": "proportion of weekly incident ED visits due to COVID-19",
-            "plot_text": "proportion of weekly incident ED visits due to COVID-19"
-        },
-        {
             "value": "wk inc flu prop ed visits",
             "text": "proportion of weekly incident ED visits due to influenza",
             "plot_text": "proportion of weekly incident ED visits due to influenza"
+        },
+        {
+            "value": "wk inc covid prop ed visits",
+            "text": "proportion of weekly incident ED visits due to COVID-19",
+            "plot_text": "proportion of weekly incident ED visits due to COVID-19"
         },
         {
             "value": "wk inc rsv prop ed visits",
@@ -31,9 +31,9 @@
             "plot_text": "proportion of weekly incident ED visits due to RSV"
         }
     ],
-    "initial_target_var": "wk inc covid hosp",
+    "initial_target_var": "wk inc flu hosp",
     "task_ids": {
-        "wk inc covid hosp": {
+        "wk inc flu hosp": {
             "location": [
                 {
                     "value": "US",
@@ -249,7 +249,7 @@
                 }
             ]
         },
-        "wk inc flu hosp": {
+        "wk inc covid hosp": {
             "location": [
                 {
                     "value": "US",
@@ -681,7 +681,7 @@
                 }
             ]
         },
-        "wk inc covid prop ed visits": {
+        "wk inc flu prop ed visits": {
             "location": [
                 {
                     "value": "US",
@@ -893,7 +893,7 @@
                 }
             ]
         },
-        "wk inc flu prop ed visits": {
+        "wk inc covid prop ed visits": {
             "location": [
                 {
                     "value": "US",
@@ -1328,9 +1328,6 @@
     ],
     "initial_interval": "95%",
     "available_as_ofs": {
-        "wk inc covid hosp": [
-            "2025-10-04"
-        ],
         "wk inc flu hosp": [
             "2026-01-17",
             "2026-01-24",
@@ -1353,13 +1350,16 @@
             "2026-05-23",
             "2026-05-30"
         ],
+        "wk inc covid hosp": [
+            "2025-10-04"
+        ],
         "wk inc rsv hosp": [
             "2025-10-04"
         ],
-        "wk inc covid prop ed visits": [
+        "wk inc flu prop ed visits": [
             "2025-10-04"
         ],
-        "wk inc flu prop ed visits": [
+        "wk inc covid prop ed visits": [
             "2025-10-04"
         ],
         "wk inc rsv prop ed visits": [
