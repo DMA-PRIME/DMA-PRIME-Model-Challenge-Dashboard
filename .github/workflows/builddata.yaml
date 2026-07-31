@@ -1,0 +1,81 @@
+name: "Rebuild Data"
+on:
+  schedule:
+    - cron: "33 17 * * 4" # Thursdays 17:33 UTC (12:33pm ET), the day after the hub refreshes
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+    paths:
+      - predtimechart-config.yml
+      - predevals-config.yml
+  workflow_dispatch:
+    inputs:
+      regenerate:
+        description: "(Forecast) Regenerate previously-recorded model output data?"
+        type: boolean
+        required: false
+        default: true
+      data:
+        description: "(Forecast) Which forecast page data should be built?"
+        type: choice
+        options:
+          - 'target'
+          - 'forecast'
+          - 'both'
+        required: false
+        default: 'both'
+      publish:
+        description: "Push Data to branch (uncheck for a dry run)"
+        type: boolean
+        required: false
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  site:
+    uses: hubverse-org/hub-dashboard-control-room/.github/workflows/generate-data.yaml@main
+    with:
+      owner: '${{ github.event.repository.owner.login }}'
+      name: '${{ github.event.repository.name }}'
+      slug: '${{ github.event.repository.owner.login }}'
+      email: '${{ github.event.repository.owner.id }}+${{ github.event.repository.owner.login }}@users.noreply.github.com'
+      regenerate: ${{ github.event_name != 'workflow_dispatch' || inputs.regenerate }}
+      build: ${{ inputs.data || 'both' }}
+      publish: ${{ inputs.publish || github.event_name == 'schedule' || github.event_name == 'push' }}
+    secrets:
+      id: 'none'
+      key: ${{ secrets.GITHUB_TOKEN }}
+
+  # Added: trim the Location dropdown to locations that actually have forecasts.
+  # Runs after the reusable data build has pushed the ptc/data branch.
+  prune-locations:
+    name: "Prune location dropdown"
+    needs: site
+    if: ${{ github.event_name == 'push' || github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.publish == null || inputs.publish)) }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main (for the prune script)
+        uses: actions/checkout@v4
+      - name: Checkout ptc/data
+        uses: actions/checkout@v4
+        with:
+          ref: ptc/data
+          path: ptc-data
+      - name: Prune locations without forecasts
+        run: python3 scripts/prune_ptc_locations.py ptc-data
+      - name: Commit if changed
+        run: |
+          cd ptc-data
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to prune."; exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add predtimechart-options.json
+          git commit -m "Prune location dropdown to forecasted locations"
+          git push
