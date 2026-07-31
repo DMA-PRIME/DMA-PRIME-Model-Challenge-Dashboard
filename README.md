@@ -31,6 +31,22 @@ splitting seasons into separate rounds would hide every season but one.
 `initial_checked_models` is currently empty, since no models have submitted yet. Add
 model ids there once teams begin submitting, so the plot is populated on load.
 
+> [!WARNING]
+> **Target order in the hub's `tasks.json` is load-bearing.** predtimechart sets
+> `initial_target_var` to the first target, but computes `initial_as_of` as the
+> **maximum reference date across all targets**, then validates that value against
+> only the first target's `available_as_ofs`. If any other target has forecasts
+> extending later than the first target's, the build fails with:
+>
+> ```
+> initial_as_of not in available_as_ofs: <date>
+> ```
+>
+> The hub therefore lists **influenza first**. If a different target later becomes
+> the one with the longest run of forecasts, either move it first in
+> `scripts/gen_tasks.py > PATHOGENS` and regenerate, or submit forecasts for all
+> targets at the same reference dates so their date ranges match.
+
 ### Evaluation page
 
 Configured for all six targets with WIS, absolute error of the median, and 50% / 95%
