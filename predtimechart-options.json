@@ -1,970 +1,1386 @@
 {
-  "target_variables": [
-    {
-      "value": "wk inc flu hosp",
-      "text": "incident influenza hospitalizations",
-      "plot_text": "incident influenza hospitalizations"
-    },
-    {
-      "value": "wk inc covid hosp",
-      "text": "incident COVID-19 hospitalizations",
-      "plot_text": "incident COVID-19 hospitalizations"
-    },
-    {
-      "value": "wk inc rsv hosp",
-      "text": "incident RSV hospitalizations",
-      "plot_text": "incident RSV hospitalizations"
-    },
-    {
-      "value": "wk inc flu prop ed visits",
-      "text": "proportion of weekly incident ED visits due to influenza",
-      "plot_text": "proportion of weekly incident ED visits due to influenza"
-    },
-    {
-      "value": "wk inc covid prop ed visits",
-      "text": "proportion of weekly incident ED visits due to COVID-19",
-      "plot_text": "proportion of weekly incident ED visits due to COVID-19"
-    },
-    {
-      "value": "wk inc rsv prop ed visits",
-      "text": "proportion of weekly incident ED visits due to RSV",
-      "plot_text": "proportion of weekly incident ED visits due to RSV"
-    }
-  ],
-  "initial_target_var": "wk inc flu hosp",
-  "task_ids": {
-    "wk inc flu hosp": {
-      "location": [
+    "target_variables": [
         {
-          "value": "45",
-          "text": "South Carolina"
+            "value": "wk inc flu hosp",
+            "text": "incident influenza hospitalizations",
+            "plot_text": "incident influenza hospitalizations"
+        },
+        {
+            "value": "wk inc covid hosp",
+            "text": "incident COVID-19 hospitalizations",
+            "plot_text": "incident COVID-19 hospitalizations"
+        },
+        {
+            "value": "wk inc rsv hosp",
+            "text": "incident RSV hospitalizations",
+            "plot_text": "incident RSV hospitalizations"
+        },
+        {
+            "value": "wk inc flu prop ed visits",
+            "text": "proportion of weekly incident ED visits due to influenza",
+            "plot_text": "proportion of weekly incident ED visits due to influenza"
+        },
+        {
+            "value": "wk inc covid prop ed visits",
+            "text": "proportion of weekly incident ED visits due to COVID-19",
+            "plot_text": "proportion of weekly incident ED visits due to COVID-19"
+        },
+        {
+            "value": "wk inc rsv prop ed visits",
+            "text": "proportion of weekly incident ED visits due to RSV",
+            "plot_text": "proportion of weekly incident ED visits due to RSV"
         }
-      ]
-    },
-    "wk inc covid hosp": {
-      "location": [
-        {
-          "value": "45",
-          "text": "South Carolina"
-        }
-      ]
-    },
-    "wk inc rsv hosp": {
-      "location": [
-        {
-          "value": "US",
-          "text": "United States"
-        },
-        {
-          "value": "01",
-          "text": "Alabama"
-        },
-        {
-          "value": "02",
-          "text": "Alaska"
-        },
-        {
-          "value": "04",
-          "text": "Arizona"
-        },
-        {
-          "value": "05",
-          "text": "Arkansas"
-        },
-        {
-          "value": "06",
-          "text": "California"
-        },
-        {
-          "value": "08",
-          "text": "Colorado"
-        },
-        {
-          "value": "09",
-          "text": "Connecticut"
-        },
-        {
-          "value": "10",
-          "text": "Delaware"
-        },
-        {
-          "value": "11",
-          "text": "District of Columbia"
-        },
-        {
-          "value": "12",
-          "text": "Florida"
-        },
-        {
-          "value": "13",
-          "text": "Georgia"
-        },
-        {
-          "value": "15",
-          "text": "Hawaii"
-        },
-        {
-          "value": "16",
-          "text": "Idaho"
-        },
-        {
-          "value": "17",
-          "text": "Illinois"
-        },
-        {
-          "value": "18",
-          "text": "Indiana"
-        },
-        {
-          "value": "19",
-          "text": "Iowa"
-        },
-        {
-          "value": "20",
-          "text": "Kansas"
-        },
-        {
-          "value": "21",
-          "text": "Kentucky"
-        },
-        {
-          "value": "22",
-          "text": "Louisiana"
-        },
-        {
-          "value": "23",
-          "text": "Maine"
-        },
-        {
-          "value": "24",
-          "text": "Maryland"
-        },
-        {
-          "value": "25",
-          "text": "Massachusetts"
-        },
-        {
-          "value": "26",
-          "text": "Michigan"
-        },
-        {
-          "value": "27",
-          "text": "Minnesota"
-        },
-        {
-          "value": "28",
-          "text": "Mississippi"
-        },
-        {
-          "value": "29",
-          "text": "Missouri"
-        },
-        {
-          "value": "30",
-          "text": "Montana"
-        },
-        {
-          "value": "31",
-          "text": "Nebraska"
-        },
-        {
-          "value": "32",
-          "text": "Nevada"
-        },
-        {
-          "value": "33",
-          "text": "New Hampshire"
-        },
-        {
-          "value": "34",
-          "text": "New Jersey"
-        },
-        {
-          "value": "35",
-          "text": "New Mexico"
-        },
-        {
-          "value": "36",
-          "text": "New York"
-        },
-        {
-          "value": "37",
-          "text": "North Carolina"
-        },
-        {
-          "value": "38",
-          "text": "North Dakota"
-        },
-        {
-          "value": "39",
-          "text": "Ohio"
-        },
-        {
-          "value": "40",
-          "text": "Oklahoma"
-        },
-        {
-          "value": "41",
-          "text": "Oregon"
-        },
-        {
-          "value": "42",
-          "text": "Pennsylvania"
-        },
-        {
-          "value": "44",
-          "text": "Rhode Island"
-        },
-        {
-          "value": "45",
-          "text": "South Carolina"
-        },
-        {
-          "value": "46",
-          "text": "South Dakota"
-        },
-        {
-          "value": "47",
-          "text": "Tennessee"
-        },
-        {
-          "value": "48",
-          "text": "Texas"
-        },
-        {
-          "value": "49",
-          "text": "Utah"
-        },
-        {
-          "value": "50",
-          "text": "Vermont"
-        },
-        {
-          "value": "51",
-          "text": "Virginia"
-        },
-        {
-          "value": "53",
-          "text": "Washington"
-        },
-        {
-          "value": "54",
-          "text": "West Virginia"
-        },
-        {
-          "value": "55",
-          "text": "Wisconsin"
-        },
-        {
-          "value": "56",
-          "text": "Wyoming"
-        },
-        {
-          "value": "72",
-          "text": "Puerto Rico"
-        }
-      ]
-    },
-    "wk inc flu prop ed visits": {
-      "location": [
-        {
-          "value": "US",
-          "text": "United States"
-        },
-        {
-          "value": "01",
-          "text": "Alabama"
-        },
-        {
-          "value": "02",
-          "text": "Alaska"
-        },
-        {
-          "value": "04",
-          "text": "Arizona"
-        },
-        {
-          "value": "05",
-          "text": "Arkansas"
-        },
-        {
-          "value": "06",
-          "text": "California"
-        },
-        {
-          "value": "08",
-          "text": "Colorado"
-        },
-        {
-          "value": "09",
-          "text": "Connecticut"
-        },
-        {
-          "value": "10",
-          "text": "Delaware"
-        },
-        {
-          "value": "11",
-          "text": "District of Columbia"
-        },
-        {
-          "value": "12",
-          "text": "Florida"
-        },
-        {
-          "value": "13",
-          "text": "Georgia"
-        },
-        {
-          "value": "15",
-          "text": "Hawaii"
-        },
-        {
-          "value": "16",
-          "text": "Idaho"
-        },
-        {
-          "value": "17",
-          "text": "Illinois"
-        },
-        {
-          "value": "18",
-          "text": "Indiana"
-        },
-        {
-          "value": "19",
-          "text": "Iowa"
-        },
-        {
-          "value": "20",
-          "text": "Kansas"
-        },
-        {
-          "value": "21",
-          "text": "Kentucky"
-        },
-        {
-          "value": "22",
-          "text": "Louisiana"
-        },
-        {
-          "value": "23",
-          "text": "Maine"
-        },
-        {
-          "value": "24",
-          "text": "Maryland"
-        },
-        {
-          "value": "25",
-          "text": "Massachusetts"
-        },
-        {
-          "value": "26",
-          "text": "Michigan"
-        },
-        {
-          "value": "27",
-          "text": "Minnesota"
-        },
-        {
-          "value": "28",
-          "text": "Mississippi"
-        },
-        {
-          "value": "29",
-          "text": "Missouri"
-        },
-        {
-          "value": "30",
-          "text": "Montana"
-        },
-        {
-          "value": "31",
-          "text": "Nebraska"
-        },
-        {
-          "value": "32",
-          "text": "Nevada"
-        },
-        {
-          "value": "33",
-          "text": "New Hampshire"
-        },
-        {
-          "value": "34",
-          "text": "New Jersey"
-        },
-        {
-          "value": "35",
-          "text": "New Mexico"
-        },
-        {
-          "value": "36",
-          "text": "New York"
-        },
-        {
-          "value": "37",
-          "text": "North Carolina"
-        },
-        {
-          "value": "38",
-          "text": "North Dakota"
-        },
-        {
-          "value": "39",
-          "text": "Ohio"
-        },
-        {
-          "value": "40",
-          "text": "Oklahoma"
-        },
-        {
-          "value": "41",
-          "text": "Oregon"
-        },
-        {
-          "value": "42",
-          "text": "Pennsylvania"
-        },
-        {
-          "value": "44",
-          "text": "Rhode Island"
-        },
-        {
-          "value": "45",
-          "text": "South Carolina"
-        },
-        {
-          "value": "46",
-          "text": "South Dakota"
-        },
-        {
-          "value": "47",
-          "text": "Tennessee"
-        },
-        {
-          "value": "48",
-          "text": "Texas"
-        },
-        {
-          "value": "49",
-          "text": "Utah"
-        },
-        {
-          "value": "50",
-          "text": "Vermont"
-        },
-        {
-          "value": "51",
-          "text": "Virginia"
-        },
-        {
-          "value": "53",
-          "text": "Washington"
-        },
-        {
-          "value": "54",
-          "text": "West Virginia"
-        },
-        {
-          "value": "55",
-          "text": "Wisconsin"
-        },
-        {
-          "value": "56",
-          "text": "Wyoming"
-        }
-      ]
-    },
-    "wk inc covid prop ed visits": {
-      "location": [
-        {
-          "value": "US",
-          "text": "United States"
-        },
-        {
-          "value": "01",
-          "text": "Alabama"
-        },
-        {
-          "value": "02",
-          "text": "Alaska"
-        },
-        {
-          "value": "04",
-          "text": "Arizona"
-        },
-        {
-          "value": "05",
-          "text": "Arkansas"
-        },
-        {
-          "value": "06",
-          "text": "California"
-        },
-        {
-          "value": "08",
-          "text": "Colorado"
-        },
-        {
-          "value": "09",
-          "text": "Connecticut"
-        },
-        {
-          "value": "10",
-          "text": "Delaware"
-        },
-        {
-          "value": "11",
-          "text": "District of Columbia"
-        },
-        {
-          "value": "12",
-          "text": "Florida"
-        },
-        {
-          "value": "13",
-          "text": "Georgia"
-        },
-        {
-          "value": "15",
-          "text": "Hawaii"
-        },
-        {
-          "value": "16",
-          "text": "Idaho"
-        },
-        {
-          "value": "17",
-          "text": "Illinois"
-        },
-        {
-          "value": "18",
-          "text": "Indiana"
-        },
-        {
-          "value": "19",
-          "text": "Iowa"
-        },
-        {
-          "value": "20",
-          "text": "Kansas"
-        },
-        {
-          "value": "21",
-          "text": "Kentucky"
-        },
-        {
-          "value": "22",
-          "text": "Louisiana"
-        },
-        {
-          "value": "23",
-          "text": "Maine"
-        },
-        {
-          "value": "24",
-          "text": "Maryland"
-        },
-        {
-          "value": "25",
-          "text": "Massachusetts"
-        },
-        {
-          "value": "26",
-          "text": "Michigan"
-        },
-        {
-          "value": "27",
-          "text": "Minnesota"
-        },
-        {
-          "value": "28",
-          "text": "Mississippi"
-        },
-        {
-          "value": "29",
-          "text": "Missouri"
-        },
-        {
-          "value": "30",
-          "text": "Montana"
-        },
-        {
-          "value": "31",
-          "text": "Nebraska"
-        },
-        {
-          "value": "32",
-          "text": "Nevada"
-        },
-        {
-          "value": "33",
-          "text": "New Hampshire"
-        },
-        {
-          "value": "34",
-          "text": "New Jersey"
-        },
-        {
-          "value": "35",
-          "text": "New Mexico"
-        },
-        {
-          "value": "36",
-          "text": "New York"
-        },
-        {
-          "value": "37",
-          "text": "North Carolina"
-        },
-        {
-          "value": "38",
-          "text": "North Dakota"
-        },
-        {
-          "value": "39",
-          "text": "Ohio"
-        },
-        {
-          "value": "40",
-          "text": "Oklahoma"
-        },
-        {
-          "value": "41",
-          "text": "Oregon"
-        },
-        {
-          "value": "42",
-          "text": "Pennsylvania"
-        },
-        {
-          "value": "44",
-          "text": "Rhode Island"
-        },
-        {
-          "value": "45",
-          "text": "South Carolina"
-        },
-        {
-          "value": "46",
-          "text": "South Dakota"
-        },
-        {
-          "value": "47",
-          "text": "Tennessee"
-        },
-        {
-          "value": "48",
-          "text": "Texas"
-        },
-        {
-          "value": "49",
-          "text": "Utah"
-        },
-        {
-          "value": "50",
-          "text": "Vermont"
-        },
-        {
-          "value": "51",
-          "text": "Virginia"
-        },
-        {
-          "value": "53",
-          "text": "Washington"
-        },
-        {
-          "value": "54",
-          "text": "West Virginia"
-        },
-        {
-          "value": "55",
-          "text": "Wisconsin"
-        },
-        {
-          "value": "56",
-          "text": "Wyoming"
-        }
-      ]
-    },
-    "wk inc rsv prop ed visits": {
-      "location": [
-        {
-          "value": "US",
-          "text": "United States"
-        },
-        {
-          "value": "01",
-          "text": "Alabama"
-        },
-        {
-          "value": "02",
-          "text": "Alaska"
-        },
-        {
-          "value": "04",
-          "text": "Arizona"
-        },
-        {
-          "value": "05",
-          "text": "Arkansas"
-        },
-        {
-          "value": "06",
-          "text": "California"
-        },
-        {
-          "value": "08",
-          "text": "Colorado"
-        },
-        {
-          "value": "09",
-          "text": "Connecticut"
-        },
-        {
-          "value": "10",
-          "text": "Delaware"
-        },
-        {
-          "value": "11",
-          "text": "District of Columbia"
-        },
-        {
-          "value": "12",
-          "text": "Florida"
-        },
-        {
-          "value": "13",
-          "text": "Georgia"
-        },
-        {
-          "value": "15",
-          "text": "Hawaii"
-        },
-        {
-          "value": "16",
-          "text": "Idaho"
-        },
-        {
-          "value": "17",
-          "text": "Illinois"
-        },
-        {
-          "value": "18",
-          "text": "Indiana"
-        },
-        {
-          "value": "19",
-          "text": "Iowa"
-        },
-        {
-          "value": "20",
-          "text": "Kansas"
-        },
-        {
-          "value": "21",
-          "text": "Kentucky"
-        },
-        {
-          "value": "22",
-          "text": "Louisiana"
-        },
-        {
-          "value": "23",
-          "text": "Maine"
-        },
-        {
-          "value": "24",
-          "text": "Maryland"
-        },
-        {
-          "value": "25",
-          "text": "Massachusetts"
-        },
-        {
-          "value": "26",
-          "text": "Michigan"
-        },
-        {
-          "value": "27",
-          "text": "Minnesota"
-        },
-        {
-          "value": "28",
-          "text": "Mississippi"
-        },
-        {
-          "value": "29",
-          "text": "Missouri"
-        },
-        {
-          "value": "30",
-          "text": "Montana"
-        },
-        {
-          "value": "31",
-          "text": "Nebraska"
-        },
-        {
-          "value": "32",
-          "text": "Nevada"
-        },
-        {
-          "value": "33",
-          "text": "New Hampshire"
-        },
-        {
-          "value": "34",
-          "text": "New Jersey"
-        },
-        {
-          "value": "35",
-          "text": "New Mexico"
-        },
-        {
-          "value": "36",
-          "text": "New York"
-        },
-        {
-          "value": "37",
-          "text": "North Carolina"
-        },
-        {
-          "value": "38",
-          "text": "North Dakota"
-        },
-        {
-          "value": "39",
-          "text": "Ohio"
-        },
-        {
-          "value": "40",
-          "text": "Oklahoma"
-        },
-        {
-          "value": "41",
-          "text": "Oregon"
-        },
-        {
-          "value": "42",
-          "text": "Pennsylvania"
-        },
-        {
-          "value": "44",
-          "text": "Rhode Island"
-        },
-        {
-          "value": "45",
-          "text": "South Carolina"
-        },
-        {
-          "value": "46",
-          "text": "South Dakota"
-        },
-        {
-          "value": "47",
-          "text": "Tennessee"
-        },
-        {
-          "value": "48",
-          "text": "Texas"
-        },
-        {
-          "value": "49",
-          "text": "Utah"
-        },
-        {
-          "value": "50",
-          "text": "Vermont"
-        },
-        {
-          "value": "51",
-          "text": "Virginia"
-        },
-        {
-          "value": "53",
-          "text": "Washington"
-        },
-        {
-          "value": "54",
-          "text": "West Virginia"
-        },
-        {
-          "value": "55",
-          "text": "Wisconsin"
-        },
-        {
-          "value": "56",
-          "text": "Wyoming"
-        }
-      ]
-    }
-  },
-  "initial_task_ids": {
-    "location": "45"
-  },
-  "intervals": [
-    "0%",
-    "50%",
-    "80%",
-    "95%"
-  ],
-  "initial_interval": "95%",
-  "available_as_ofs": {
-    "wk inc flu hosp": [
-      "2026-01-17",
-      "2026-01-24",
-      "2026-01-31",
-      "2026-02-07",
-      "2026-02-14",
-      "2026-02-21",
-      "2026-02-28",
-      "2026-03-07",
-      "2026-03-14",
-      "2026-03-21",
-      "2026-03-28",
-      "2026-04-04",
-      "2026-04-11",
-      "2026-04-18",
-      "2026-04-25",
-      "2026-05-02",
-      "2026-05-09",
-      "2026-05-16",
-      "2026-05-23",
-      "2026-05-30"
     ],
-    "wk inc covid hosp": [
-      "2026-06-06"
+    "initial_target_var": "wk inc flu hosp",
+    "task_ids": {
+        "wk inc flu hosp": {
+            "location": [
+                {
+                    "value": "US",
+                    "text": "United States"
+                },
+                {
+                    "value": "01",
+                    "text": "Alabama"
+                },
+                {
+                    "value": "02",
+                    "text": "Alaska"
+                },
+                {
+                    "value": "04",
+                    "text": "Arizona"
+                },
+                {
+                    "value": "05",
+                    "text": "Arkansas"
+                },
+                {
+                    "value": "06",
+                    "text": "California"
+                },
+                {
+                    "value": "08",
+                    "text": "Colorado"
+                },
+                {
+                    "value": "09",
+                    "text": "Connecticut"
+                },
+                {
+                    "value": "10",
+                    "text": "Delaware"
+                },
+                {
+                    "value": "11",
+                    "text": "District of Columbia"
+                },
+                {
+                    "value": "12",
+                    "text": "Florida"
+                },
+                {
+                    "value": "13",
+                    "text": "Georgia"
+                },
+                {
+                    "value": "15",
+                    "text": "Hawaii"
+                },
+                {
+                    "value": "16",
+                    "text": "Idaho"
+                },
+                {
+                    "value": "17",
+                    "text": "Illinois"
+                },
+                {
+                    "value": "18",
+                    "text": "Indiana"
+                },
+                {
+                    "value": "19",
+                    "text": "Iowa"
+                },
+                {
+                    "value": "20",
+                    "text": "Kansas"
+                },
+                {
+                    "value": "21",
+                    "text": "Kentucky"
+                },
+                {
+                    "value": "22",
+                    "text": "Louisiana"
+                },
+                {
+                    "value": "23",
+                    "text": "Maine"
+                },
+                {
+                    "value": "24",
+                    "text": "Maryland"
+                },
+                {
+                    "value": "25",
+                    "text": "Massachusetts"
+                },
+                {
+                    "value": "26",
+                    "text": "Michigan"
+                },
+                {
+                    "value": "27",
+                    "text": "Minnesota"
+                },
+                {
+                    "value": "28",
+                    "text": "Mississippi"
+                },
+                {
+                    "value": "29",
+                    "text": "Missouri"
+                },
+                {
+                    "value": "30",
+                    "text": "Montana"
+                },
+                {
+                    "value": "31",
+                    "text": "Nebraska"
+                },
+                {
+                    "value": "32",
+                    "text": "Nevada"
+                },
+                {
+                    "value": "33",
+                    "text": "New Hampshire"
+                },
+                {
+                    "value": "34",
+                    "text": "New Jersey"
+                },
+                {
+                    "value": "35",
+                    "text": "New Mexico"
+                },
+                {
+                    "value": "36",
+                    "text": "New York"
+                },
+                {
+                    "value": "37",
+                    "text": "North Carolina"
+                },
+                {
+                    "value": "38",
+                    "text": "North Dakota"
+                },
+                {
+                    "value": "39",
+                    "text": "Ohio"
+                },
+                {
+                    "value": "40",
+                    "text": "Oklahoma"
+                },
+                {
+                    "value": "41",
+                    "text": "Oregon"
+                },
+                {
+                    "value": "42",
+                    "text": "Pennsylvania"
+                },
+                {
+                    "value": "44",
+                    "text": "Rhode Island"
+                },
+                {
+                    "value": "45",
+                    "text": "South Carolina"
+                },
+                {
+                    "value": "46",
+                    "text": "South Dakota"
+                },
+                {
+                    "value": "47",
+                    "text": "Tennessee"
+                },
+                {
+                    "value": "48",
+                    "text": "Texas"
+                },
+                {
+                    "value": "49",
+                    "text": "Utah"
+                },
+                {
+                    "value": "50",
+                    "text": "Vermont"
+                },
+                {
+                    "value": "51",
+                    "text": "Virginia"
+                },
+                {
+                    "value": "53",
+                    "text": "Washington"
+                },
+                {
+                    "value": "54",
+                    "text": "West Virginia"
+                },
+                {
+                    "value": "55",
+                    "text": "Wisconsin"
+                },
+                {
+                    "value": "56",
+                    "text": "Wyoming"
+                },
+                {
+                    "value": "72",
+                    "text": "Puerto Rico"
+                }
+            ]
+        },
+        "wk inc covid hosp": {
+            "location": [
+                {
+                    "value": "US",
+                    "text": "United States"
+                },
+                {
+                    "value": "01",
+                    "text": "Alabama"
+                },
+                {
+                    "value": "02",
+                    "text": "Alaska"
+                },
+                {
+                    "value": "04",
+                    "text": "Arizona"
+                },
+                {
+                    "value": "05",
+                    "text": "Arkansas"
+                },
+                {
+                    "value": "06",
+                    "text": "California"
+                },
+                {
+                    "value": "08",
+                    "text": "Colorado"
+                },
+                {
+                    "value": "09",
+                    "text": "Connecticut"
+                },
+                {
+                    "value": "10",
+                    "text": "Delaware"
+                },
+                {
+                    "value": "11",
+                    "text": "District of Columbia"
+                },
+                {
+                    "value": "12",
+                    "text": "Florida"
+                },
+                {
+                    "value": "13",
+                    "text": "Georgia"
+                },
+                {
+                    "value": "15",
+                    "text": "Hawaii"
+                },
+                {
+                    "value": "16",
+                    "text": "Idaho"
+                },
+                {
+                    "value": "17",
+                    "text": "Illinois"
+                },
+                {
+                    "value": "18",
+                    "text": "Indiana"
+                },
+                {
+                    "value": "19",
+                    "text": "Iowa"
+                },
+                {
+                    "value": "20",
+                    "text": "Kansas"
+                },
+                {
+                    "value": "21",
+                    "text": "Kentucky"
+                },
+                {
+                    "value": "22",
+                    "text": "Louisiana"
+                },
+                {
+                    "value": "23",
+                    "text": "Maine"
+                },
+                {
+                    "value": "24",
+                    "text": "Maryland"
+                },
+                {
+                    "value": "25",
+                    "text": "Massachusetts"
+                },
+                {
+                    "value": "26",
+                    "text": "Michigan"
+                },
+                {
+                    "value": "27",
+                    "text": "Minnesota"
+                },
+                {
+                    "value": "28",
+                    "text": "Mississippi"
+                },
+                {
+                    "value": "29",
+                    "text": "Missouri"
+                },
+                {
+                    "value": "30",
+                    "text": "Montana"
+                },
+                {
+                    "value": "31",
+                    "text": "Nebraska"
+                },
+                {
+                    "value": "32",
+                    "text": "Nevada"
+                },
+                {
+                    "value": "33",
+                    "text": "New Hampshire"
+                },
+                {
+                    "value": "34",
+                    "text": "New Jersey"
+                },
+                {
+                    "value": "35",
+                    "text": "New Mexico"
+                },
+                {
+                    "value": "36",
+                    "text": "New York"
+                },
+                {
+                    "value": "37",
+                    "text": "North Carolina"
+                },
+                {
+                    "value": "38",
+                    "text": "North Dakota"
+                },
+                {
+                    "value": "39",
+                    "text": "Ohio"
+                },
+                {
+                    "value": "40",
+                    "text": "Oklahoma"
+                },
+                {
+                    "value": "41",
+                    "text": "Oregon"
+                },
+                {
+                    "value": "42",
+                    "text": "Pennsylvania"
+                },
+                {
+                    "value": "44",
+                    "text": "Rhode Island"
+                },
+                {
+                    "value": "45",
+                    "text": "South Carolina"
+                },
+                {
+                    "value": "46",
+                    "text": "South Dakota"
+                },
+                {
+                    "value": "47",
+                    "text": "Tennessee"
+                },
+                {
+                    "value": "48",
+                    "text": "Texas"
+                },
+                {
+                    "value": "49",
+                    "text": "Utah"
+                },
+                {
+                    "value": "50",
+                    "text": "Vermont"
+                },
+                {
+                    "value": "51",
+                    "text": "Virginia"
+                },
+                {
+                    "value": "53",
+                    "text": "Washington"
+                },
+                {
+                    "value": "54",
+                    "text": "West Virginia"
+                },
+                {
+                    "value": "55",
+                    "text": "Wisconsin"
+                },
+                {
+                    "value": "56",
+                    "text": "Wyoming"
+                },
+                {
+                    "value": "72",
+                    "text": "Puerto Rico"
+                }
+            ]
+        },
+        "wk inc rsv hosp": {
+            "location": [
+                {
+                    "value": "US",
+                    "text": "United States"
+                },
+                {
+                    "value": "01",
+                    "text": "Alabama"
+                },
+                {
+                    "value": "02",
+                    "text": "Alaska"
+                },
+                {
+                    "value": "04",
+                    "text": "Arizona"
+                },
+                {
+                    "value": "05",
+                    "text": "Arkansas"
+                },
+                {
+                    "value": "06",
+                    "text": "California"
+                },
+                {
+                    "value": "08",
+                    "text": "Colorado"
+                },
+                {
+                    "value": "09",
+                    "text": "Connecticut"
+                },
+                {
+                    "value": "10",
+                    "text": "Delaware"
+                },
+                {
+                    "value": "11",
+                    "text": "District of Columbia"
+                },
+                {
+                    "value": "12",
+                    "text": "Florida"
+                },
+                {
+                    "value": "13",
+                    "text": "Georgia"
+                },
+                {
+                    "value": "15",
+                    "text": "Hawaii"
+                },
+                {
+                    "value": "16",
+                    "text": "Idaho"
+                },
+                {
+                    "value": "17",
+                    "text": "Illinois"
+                },
+                {
+                    "value": "18",
+                    "text": "Indiana"
+                },
+                {
+                    "value": "19",
+                    "text": "Iowa"
+                },
+                {
+                    "value": "20",
+                    "text": "Kansas"
+                },
+                {
+                    "value": "21",
+                    "text": "Kentucky"
+                },
+                {
+                    "value": "22",
+                    "text": "Louisiana"
+                },
+                {
+                    "value": "23",
+                    "text": "Maine"
+                },
+                {
+                    "value": "24",
+                    "text": "Maryland"
+                },
+                {
+                    "value": "25",
+                    "text": "Massachusetts"
+                },
+                {
+                    "value": "26",
+                    "text": "Michigan"
+                },
+                {
+                    "value": "27",
+                    "text": "Minnesota"
+                },
+                {
+                    "value": "28",
+                    "text": "Mississippi"
+                },
+                {
+                    "value": "29",
+                    "text": "Missouri"
+                },
+                {
+                    "value": "30",
+                    "text": "Montana"
+                },
+                {
+                    "value": "31",
+                    "text": "Nebraska"
+                },
+                {
+                    "value": "32",
+                    "text": "Nevada"
+                },
+                {
+                    "value": "33",
+                    "text": "New Hampshire"
+                },
+                {
+                    "value": "34",
+                    "text": "New Jersey"
+                },
+                {
+                    "value": "35",
+                    "text": "New Mexico"
+                },
+                {
+                    "value": "36",
+                    "text": "New York"
+                },
+                {
+                    "value": "37",
+                    "text": "North Carolina"
+                },
+                {
+                    "value": "38",
+                    "text": "North Dakota"
+                },
+                {
+                    "value": "39",
+                    "text": "Ohio"
+                },
+                {
+                    "value": "40",
+                    "text": "Oklahoma"
+                },
+                {
+                    "value": "41",
+                    "text": "Oregon"
+                },
+                {
+                    "value": "42",
+                    "text": "Pennsylvania"
+                },
+                {
+                    "value": "44",
+                    "text": "Rhode Island"
+                },
+                {
+                    "value": "45",
+                    "text": "South Carolina"
+                },
+                {
+                    "value": "46",
+                    "text": "South Dakota"
+                },
+                {
+                    "value": "47",
+                    "text": "Tennessee"
+                },
+                {
+                    "value": "48",
+                    "text": "Texas"
+                },
+                {
+                    "value": "49",
+                    "text": "Utah"
+                },
+                {
+                    "value": "50",
+                    "text": "Vermont"
+                },
+                {
+                    "value": "51",
+                    "text": "Virginia"
+                },
+                {
+                    "value": "53",
+                    "text": "Washington"
+                },
+                {
+                    "value": "54",
+                    "text": "West Virginia"
+                },
+                {
+                    "value": "55",
+                    "text": "Wisconsin"
+                },
+                {
+                    "value": "56",
+                    "text": "Wyoming"
+                },
+                {
+                    "value": "72",
+                    "text": "Puerto Rico"
+                }
+            ]
+        },
+        "wk inc flu prop ed visits": {
+            "location": [
+                {
+                    "value": "US",
+                    "text": "United States"
+                },
+                {
+                    "value": "01",
+                    "text": "Alabama"
+                },
+                {
+                    "value": "02",
+                    "text": "Alaska"
+                },
+                {
+                    "value": "04",
+                    "text": "Arizona"
+                },
+                {
+                    "value": "05",
+                    "text": "Arkansas"
+                },
+                {
+                    "value": "06",
+                    "text": "California"
+                },
+                {
+                    "value": "08",
+                    "text": "Colorado"
+                },
+                {
+                    "value": "09",
+                    "text": "Connecticut"
+                },
+                {
+                    "value": "10",
+                    "text": "Delaware"
+                },
+                {
+                    "value": "11",
+                    "text": "District of Columbia"
+                },
+                {
+                    "value": "12",
+                    "text": "Florida"
+                },
+                {
+                    "value": "13",
+                    "text": "Georgia"
+                },
+                {
+                    "value": "15",
+                    "text": "Hawaii"
+                },
+                {
+                    "value": "16",
+                    "text": "Idaho"
+                },
+                {
+                    "value": "17",
+                    "text": "Illinois"
+                },
+                {
+                    "value": "18",
+                    "text": "Indiana"
+                },
+                {
+                    "value": "19",
+                    "text": "Iowa"
+                },
+                {
+                    "value": "20",
+                    "text": "Kansas"
+                },
+                {
+                    "value": "21",
+                    "text": "Kentucky"
+                },
+                {
+                    "value": "22",
+                    "text": "Louisiana"
+                },
+                {
+                    "value": "23",
+                    "text": "Maine"
+                },
+                {
+                    "value": "24",
+                    "text": "Maryland"
+                },
+                {
+                    "value": "25",
+                    "text": "Massachusetts"
+                },
+                {
+                    "value": "26",
+                    "text": "Michigan"
+                },
+                {
+                    "value": "27",
+                    "text": "Minnesota"
+                },
+                {
+                    "value": "28",
+                    "text": "Mississippi"
+                },
+                {
+                    "value": "29",
+                    "text": "Missouri"
+                },
+                {
+                    "value": "30",
+                    "text": "Montana"
+                },
+                {
+                    "value": "31",
+                    "text": "Nebraska"
+                },
+                {
+                    "value": "32",
+                    "text": "Nevada"
+                },
+                {
+                    "value": "33",
+                    "text": "New Hampshire"
+                },
+                {
+                    "value": "34",
+                    "text": "New Jersey"
+                },
+                {
+                    "value": "35",
+                    "text": "New Mexico"
+                },
+                {
+                    "value": "36",
+                    "text": "New York"
+                },
+                {
+                    "value": "37",
+                    "text": "North Carolina"
+                },
+                {
+                    "value": "38",
+                    "text": "North Dakota"
+                },
+                {
+                    "value": "39",
+                    "text": "Ohio"
+                },
+                {
+                    "value": "40",
+                    "text": "Oklahoma"
+                },
+                {
+                    "value": "41",
+                    "text": "Oregon"
+                },
+                {
+                    "value": "42",
+                    "text": "Pennsylvania"
+                },
+                {
+                    "value": "44",
+                    "text": "Rhode Island"
+                },
+                {
+                    "value": "45",
+                    "text": "South Carolina"
+                },
+                {
+                    "value": "46",
+                    "text": "South Dakota"
+                },
+                {
+                    "value": "47",
+                    "text": "Tennessee"
+                },
+                {
+                    "value": "48",
+                    "text": "Texas"
+                },
+                {
+                    "value": "49",
+                    "text": "Utah"
+                },
+                {
+                    "value": "50",
+                    "text": "Vermont"
+                },
+                {
+                    "value": "51",
+                    "text": "Virginia"
+                },
+                {
+                    "value": "53",
+                    "text": "Washington"
+                },
+                {
+                    "value": "54",
+                    "text": "West Virginia"
+                },
+                {
+                    "value": "55",
+                    "text": "Wisconsin"
+                },
+                {
+                    "value": "56",
+                    "text": "Wyoming"
+                }
+            ]
+        },
+        "wk inc covid prop ed visits": {
+            "location": [
+                {
+                    "value": "US",
+                    "text": "United States"
+                },
+                {
+                    "value": "01",
+                    "text": "Alabama"
+                },
+                {
+                    "value": "02",
+                    "text": "Alaska"
+                },
+                {
+                    "value": "04",
+                    "text": "Arizona"
+                },
+                {
+                    "value": "05",
+                    "text": "Arkansas"
+                },
+                {
+                    "value": "06",
+                    "text": "California"
+                },
+                {
+                    "value": "08",
+                    "text": "Colorado"
+                },
+                {
+                    "value": "09",
+                    "text": "Connecticut"
+                },
+                {
+                    "value": "10",
+                    "text": "Delaware"
+                },
+                {
+                    "value": "11",
+                    "text": "District of Columbia"
+                },
+                {
+                    "value": "12",
+                    "text": "Florida"
+                },
+                {
+                    "value": "13",
+                    "text": "Georgia"
+                },
+                {
+                    "value": "15",
+                    "text": "Hawaii"
+                },
+                {
+                    "value": "16",
+                    "text": "Idaho"
+                },
+                {
+                    "value": "17",
+                    "text": "Illinois"
+                },
+                {
+                    "value": "18",
+                    "text": "Indiana"
+                },
+                {
+                    "value": "19",
+                    "text": "Iowa"
+                },
+                {
+                    "value": "20",
+                    "text": "Kansas"
+                },
+                {
+                    "value": "21",
+                    "text": "Kentucky"
+                },
+                {
+                    "value": "22",
+                    "text": "Louisiana"
+                },
+                {
+                    "value": "23",
+                    "text": "Maine"
+                },
+                {
+                    "value": "24",
+                    "text": "Maryland"
+                },
+                {
+                    "value": "25",
+                    "text": "Massachusetts"
+                },
+                {
+                    "value": "26",
+                    "text": "Michigan"
+                },
+                {
+                    "value": "27",
+                    "text": "Minnesota"
+                },
+                {
+                    "value": "28",
+                    "text": "Mississippi"
+                },
+                {
+                    "value": "29",
+                    "text": "Missouri"
+                },
+                {
+                    "value": "30",
+                    "text": "Montana"
+                },
+                {
+                    "value": "31",
+                    "text": "Nebraska"
+                },
+                {
+                    "value": "32",
+                    "text": "Nevada"
+                },
+                {
+                    "value": "33",
+                    "text": "New Hampshire"
+                },
+                {
+                    "value": "34",
+                    "text": "New Jersey"
+                },
+                {
+                    "value": "35",
+                    "text": "New Mexico"
+                },
+                {
+                    "value": "36",
+                    "text": "New York"
+                },
+                {
+                    "value": "37",
+                    "text": "North Carolina"
+                },
+                {
+                    "value": "38",
+                    "text": "North Dakota"
+                },
+                {
+                    "value": "39",
+                    "text": "Ohio"
+                },
+                {
+                    "value": "40",
+                    "text": "Oklahoma"
+                },
+                {
+                    "value": "41",
+                    "text": "Oregon"
+                },
+                {
+                    "value": "42",
+                    "text": "Pennsylvania"
+                },
+                {
+                    "value": "44",
+                    "text": "Rhode Island"
+                },
+                {
+                    "value": "45",
+                    "text": "South Carolina"
+                },
+                {
+                    "value": "46",
+                    "text": "South Dakota"
+                },
+                {
+                    "value": "47",
+                    "text": "Tennessee"
+                },
+                {
+                    "value": "48",
+                    "text": "Texas"
+                },
+                {
+                    "value": "49",
+                    "text": "Utah"
+                },
+                {
+                    "value": "50",
+                    "text": "Vermont"
+                },
+                {
+                    "value": "51",
+                    "text": "Virginia"
+                },
+                {
+                    "value": "53",
+                    "text": "Washington"
+                },
+                {
+                    "value": "54",
+                    "text": "West Virginia"
+                },
+                {
+                    "value": "55",
+                    "text": "Wisconsin"
+                },
+                {
+                    "value": "56",
+                    "text": "Wyoming"
+                }
+            ]
+        },
+        "wk inc rsv prop ed visits": {
+            "location": [
+                {
+                    "value": "US",
+                    "text": "United States"
+                },
+                {
+                    "value": "01",
+                    "text": "Alabama"
+                },
+                {
+                    "value": "02",
+                    "text": "Alaska"
+                },
+                {
+                    "value": "04",
+                    "text": "Arizona"
+                },
+                {
+                    "value": "05",
+                    "text": "Arkansas"
+                },
+                {
+                    "value": "06",
+                    "text": "California"
+                },
+                {
+                    "value": "08",
+                    "text": "Colorado"
+                },
+                {
+                    "value": "09",
+                    "text": "Connecticut"
+                },
+                {
+                    "value": "10",
+                    "text": "Delaware"
+                },
+                {
+                    "value": "11",
+                    "text": "District of Columbia"
+                },
+                {
+                    "value": "12",
+                    "text": "Florida"
+                },
+                {
+                    "value": "13",
+                    "text": "Georgia"
+                },
+                {
+                    "value": "15",
+                    "text": "Hawaii"
+                },
+                {
+                    "value": "16",
+                    "text": "Idaho"
+                },
+                {
+                    "value": "17",
+                    "text": "Illinois"
+                },
+                {
+                    "value": "18",
+                    "text": "Indiana"
+                },
+                {
+                    "value": "19",
+                    "text": "Iowa"
+                },
+                {
+                    "value": "20",
+                    "text": "Kansas"
+                },
+                {
+                    "value": "21",
+                    "text": "Kentucky"
+                },
+                {
+                    "value": "22",
+                    "text": "Louisiana"
+                },
+                {
+                    "value": "23",
+                    "text": "Maine"
+                },
+                {
+                    "value": "24",
+                    "text": "Maryland"
+                },
+                {
+                    "value": "25",
+                    "text": "Massachusetts"
+                },
+                {
+                    "value": "26",
+                    "text": "Michigan"
+                },
+                {
+                    "value": "27",
+                    "text": "Minnesota"
+                },
+                {
+                    "value": "28",
+                    "text": "Mississippi"
+                },
+                {
+                    "value": "29",
+                    "text": "Missouri"
+                },
+                {
+                    "value": "30",
+                    "text": "Montana"
+                },
+                {
+                    "value": "31",
+                    "text": "Nebraska"
+                },
+                {
+                    "value": "32",
+                    "text": "Nevada"
+                },
+                {
+                    "value": "33",
+                    "text": "New Hampshire"
+                },
+                {
+                    "value": "34",
+                    "text": "New Jersey"
+                },
+                {
+                    "value": "35",
+                    "text": "New Mexico"
+                },
+                {
+                    "value": "36",
+                    "text": "New York"
+                },
+                {
+                    "value": "37",
+                    "text": "North Carolina"
+                },
+                {
+                    "value": "38",
+                    "text": "North Dakota"
+                },
+                {
+                    "value": "39",
+                    "text": "Ohio"
+                },
+                {
+                    "value": "40",
+                    "text": "Oklahoma"
+                },
+                {
+                    "value": "41",
+                    "text": "Oregon"
+                },
+                {
+                    "value": "42",
+                    "text": "Pennsylvania"
+                },
+                {
+                    "value": "44",
+                    "text": "Rhode Island"
+                },
+                {
+                    "value": "45",
+                    "text": "South Carolina"
+                },
+                {
+                    "value": "46",
+                    "text": "South Dakota"
+                },
+                {
+                    "value": "47",
+                    "text": "Tennessee"
+                },
+                {
+                    "value": "48",
+                    "text": "Texas"
+                },
+                {
+                    "value": "49",
+                    "text": "Utah"
+                },
+                {
+                    "value": "50",
+                    "text": "Vermont"
+                },
+                {
+                    "value": "51",
+                    "text": "Virginia"
+                },
+                {
+                    "value": "53",
+                    "text": "Washington"
+                },
+                {
+                    "value": "54",
+                    "text": "West Virginia"
+                },
+                {
+                    "value": "55",
+                    "text": "Wisconsin"
+                },
+                {
+                    "value": "56",
+                    "text": "Wyoming"
+                }
+            ]
+        }
+    },
+    "initial_task_ids": {
+        "location": "US"
+    },
+    "intervals": [
+        "0%",
+        "50%",
+        "80%",
+        "95%"
     ],
-    "wk inc rsv hosp": [
-      "2025-10-04"
+    "initial_interval": "95%",
+    "available_as_ofs": {
+        "wk inc flu hosp": [
+            "2026-01-17",
+            "2026-01-24",
+            "2026-01-31",
+            "2026-02-07",
+            "2026-02-14",
+            "2026-02-21",
+            "2026-02-28",
+            "2026-03-07",
+            "2026-03-14",
+            "2026-03-21",
+            "2026-03-28",
+            "2026-04-04",
+            "2026-04-11",
+            "2026-04-18",
+            "2026-04-25",
+            "2026-05-02",
+            "2026-05-09",
+            "2026-05-16",
+            "2026-05-23",
+            "2026-05-30"
+        ],
+        "wk inc covid hosp": [
+            "2026-06-06"
+        ],
+        "wk inc rsv hosp": [
+            "2025-10-04"
+        ],
+        "wk inc flu prop ed visits": [
+            "2025-10-04"
+        ],
+        "wk inc covid prop ed visits": [
+            "2025-10-04"
+        ],
+        "wk inc rsv prop ed visits": [
+            "2025-10-04"
+        ]
+    },
+    "initial_as_of": "2026-06-06",
+    "current_date": "2026-06-06",
+    "models": [
+        "DMAPRIME-QR"
     ],
-    "wk inc flu prop ed visits": [
-      "2025-10-04"
+    "initial_checked_models": [
+        "DMAPRIME-QR"
     ],
-    "wk inc covid prop ed visits": [
-      "2025-10-04"
-    ],
-    "wk inc rsv prop ed visits": [
-      "2025-10-04"
+    "model_urls": {
+        "DMAPRIME-QR": "https://github.com/bleicham/DMA-PRIME-Model-Challenge-Sandbox/blob/main/model-metadata/DMAPRIME-QR.yml"
+    },
+    "disclaimer": "Forecasts shown here are submitted to the DMA-PRIME Model Challenge, a research and training exercise run by the Clemson University Center for Public Health Modeling and Response. They are not CDC forecasts and are not intended to inform public health decisions.",
+    "initial_xaxis_range": [
+        "2025-10-04",
+        "2026-10-03"
     ]
-  },
-  "initial_as_of": "2026-06-06",
-  "current_date": "2026-06-06",
-  "models": [
-    "DMAPRIME-QR"
-  ],
-  "initial_checked_models": [
-    "DMAPRIME-QR"
-  ],
-  "model_urls": {
-    "DMAPRIME-QR": "https://github.com/bleicham/DMA-PRIME-Model-Challenge-Sandbox/blob/main/model-metadata/DMAPRIME-QR.yml"
-  },
-  "disclaimer": "Forecasts shown here are submitted to the DMA-PRIME Model Challenge, a research and training exercise run by the Clemson University Center for Public Health Modeling and Response. They are not CDC forecasts and are not intended to inform public health decisions.",
-  "initial_xaxis_range": [
-    "2025-10-04",
-    "2026-10-03"
-  ]
 }
