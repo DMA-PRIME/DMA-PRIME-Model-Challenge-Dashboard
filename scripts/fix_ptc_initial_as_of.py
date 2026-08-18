@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Make the predtimechart opening view robust to targets with uneven coverage.
 
-hub-dashboard-predtimechart computes `initial_as_of` (and `current_date`) as the
-maximum reference date across ALL targets, but predtimechart validates that value
-against only `available_as_ofs[initial_target_var]` (the FIRST target). If any
-other target has a forecast for a later reference date than the first target, the
-page fails to load with:
+hub-dashboard-predtimechart computes `initial_as_of` as the maximum reference
+date across ALL targets, but predtimechart validates that value against only
+`available_as_ofs[initial_target_var]` (the FIRST target). If any other target
+has a forecast for a later reference date than the first target, the page fails
+to load with:
 
     initial_as_of not in available_as_ofs: <date>
 
@@ -14,8 +14,14 @@ always self-consistent:
 
 1. If `initial_target_var` has no forecasts at all, switch it (and
    `initial_task_ids`) to the target with the most recent forecast.
-2. Snap `initial_as_of` and `current_date` to the latest date in the initial
-   target's own `available_as_ofs`.
+2. Snap `initial_as_of` to the latest date in the initial target's own
+   `available_as_ofs`.
+3. Ensure `current_date` is the latest date across ALL targets. It is NOT
+   validated against any per-target list and must NOT be snapped down: it
+   selects which snapshot of truth/target data is drawn as the "Current" line
+   (legend shows "Current (<date>)"), and truth files are generated for every
+   reference date regardless of forecast submissions. Snapping it down would
+   show stale surveillance data.
 
 Run it against the built data directory (the checked-out `ptc/data` branch),
 AFTER prune_ptc_locations.py:
@@ -36,14 +42,17 @@ available = opts.get("available_as_ofs", {})  # target_id -> [iso dates]
 initial_tv = opts.get("initial_target_var")
 changed = False
 
+all_dates = [d for dates in available.values() for d in dates]
+if not all_dates:
+    print("no target has any forecasts; nothing to fix")
+    sys.exit(0)
+global_max = max(all_dates)
+
 # 1. If the initial target has no forecasts, fall back to the target whose
 #    latest forecast is most recent (ties broken by target order in the file).
 if not available.get(initial_tv):
-    candidates = [(max(dates), tv) for tv, dates in available.items() if dates]
-    if not candidates:
-        print("no target has any forecasts; nothing to fix")
-        sys.exit(0)
-    initial_tv = max(candidates)[1]
+    initial_tv = max((max(dates), tv) for tv, dates in available.items()
+                     if dates)[1]
     opts["initial_target_var"] = initial_tv
     # rebuild initial_task_ids from the new target's own task options
     new_task_ids = opts.get("task_ids", {}).get(initial_tv, {})
@@ -53,15 +62,23 @@ if not available.get(initial_tv):
     changed = True
     print(f"initial_target_var had no forecasts; switched to {initial_tv!r}")
 
-# 2. Snap initial_as_of / current_date to dates the initial target actually has.
+# 2. Snap initial_as_of (the only field predtimechart validates per-target)
+#    to a date the initial target actually has.
 valid = set(available[initial_tv])
-latest = max(valid)
-for key in ("initial_as_of", "current_date"):
-    if opts.get(key) not in valid:
-        print(f"{key}: {opts.get(key)!r} not in {initial_tv!r}'s "
-              f"available_as_ofs; snapping to {latest!r}")
-        opts[key] = latest
-        changed = True
+if opts.get("initial_as_of") not in valid:
+    latest = max(valid)
+    print(f"initial_as_of: {opts.get('initial_as_of')!r} not in "
+          f"{initial_tv!r}'s available_as_ofs; snapping to {latest!r}")
+    opts["initial_as_of"] = latest
+    changed = True
+
+# 3. current_date must track the GLOBAL latest date (freshest truth snapshot).
+#    Do not snap it down with initial_as_of; it is not validated per-target.
+if opts.get("current_date") != global_max:
+    print(f"current_date: {opts.get('current_date')!r} -> {global_max!r} "
+          "(latest date across all targets)")
+    opts["current_date"] = global_max
+    changed = True
 
 if changed:
     opts_path.write_text(json.dumps(opts, indent=2))
