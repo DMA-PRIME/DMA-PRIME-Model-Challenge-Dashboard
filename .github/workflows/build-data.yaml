@@ -49,11 +49,14 @@ jobs:
       id: 'none'
       key: ${{ secrets.GITHUB_TOKEN }}
 
-  # Added: post-process the generated predtimechart-options.json.
+  # Added: post-process the generated predtimechart-options.json and targets/.
   #   1. Trim the Location dropdown to locations that actually have forecasts.
-  #   2. Snap initial_as_of/current_date to dates the opening target actually
-  #      has, preventing "initial_as_of not in available_as_ofs" load failures
+  #   2. Snap initial_as_of to a date the opening target actually has,
+  #      preventing "initial_as_of not in available_as_ofs" load failures
   #      when targets have uneven submission coverage.
+  #   3. Extend truth files to the hub's latest data snapshot and point
+  #      current_date at it, so the "Current" line tracks the actual current
+  #      week of data even when forecast submissions pause (off-season).
   # Runs after the reusable data build has pushed the ptc/data branch.
   prune-locations:
     name: "Post-process predtimechart options"
@@ -63,17 +66,26 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout main (for the prune script)
+      - name: Checkout main (for the post-processing scripts)
         uses: actions/checkout@v4
       - name: Checkout ptc/data
         uses: actions/checkout@v4
         with:
           ref: ptc/data
           path: ptc-data
+      - name: Checkout hub (for versioned target data)
+        uses: actions/checkout@v4
+        with:
+          repository: DMA-PRIME/DMA-PRIME-Model-Challenge-Sandbox
+          path: hub
+      - name: Install dependencies
+        run: pip install polars
       - name: Prune locations without forecasts
         run: python3 scripts/prune_ptc_locations.py ptc-data
       - name: Fix initial as_of for uneven target coverage
         run: python3 scripts/fix_ptc_initial_as_of.py ptc-data
+      - name: Extend truth to latest data week
+        run: python3 scripts/extend_ptc_targets.py hub ptc-data
       - name: Commit if changed
         run: |
           cd ptc-data
@@ -82,6 +94,6 @@ jobs:
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add predtimechart-options.json
-          git commit -m "Post-process predtimechart options (prune locations, fix initial_as_of)"
+          git add predtimechart-options.json targets/
+          git commit -m "Post-process ptc data (prune, fix initial_as_of, extend truth to latest week)"
           git push
