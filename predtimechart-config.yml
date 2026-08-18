@@ -5,8 +5,10 @@ rounds_idx: 0
 reference_date_col_name: 'reference_date'
 target_date_col_name: 'target_end_date'
 horizon_col_name: 'horizon'
-# Models checked on load. Add model ids as teams submit.
-initial_checked_models: ['DMAPRIME-QR']
+# Models checked on load. Also forces non-designated models into the model
+# list: the generator only includes a model if its metadata has
+# `designated_model: true` OR it is named here.
+initial_checked_models: ['DMAPRIME-QR', 'CPHMR-XGB']
 # Opening view: null lets predtimechart choose, showing the full history of
 # target data and forecasts (back to the 2023-10-07 start of target data).
 initial_xaxis_range: null
